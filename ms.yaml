@@ -1,0 +1,40 @@
+# pandoc --standalone -C --pdf-engine=pdfroff --variable=fontfamily:NewCM --toc --pdf-engine-opt=--no-toc-relocation --pdf-engine-opt="-dpaper=a4" --pdf-engine-opt="-U" --pdf-engine-opt="-P-pa4" -L image-ms.lua -L tasklist-ms.lua -o test-all.pdfroff.pdf test-all.md 
+# Note: toc not set default here; use command line
+from: markdown
+to: ms
+template: bk
+citeproc: true
+standalone: true
+pdf-engine: pdfroff
+pdf-engine-opts:
+    # - "--no-toc-relocation"
+    - "-U"
+variables:
+    papersize: a4
+    fontfamily: NewCM
+    # heading-fontfam* used by filter; has no effect without
+    # fontfamily also being set.
+    # Note that this affects the font in the table of contents!
+    heading-fontfam: NewCMSans
+    heading-fontfam-max-level: 4
+    pointsize: 10p
+    lineheight: 13p
+    indent: 2m
+    hyphenate: true
+    text-width: 15c
+    margin-left: 3c
+    margin-top: 2.5c
+    margin-bottom: 2.5c
+    paragraph-spacing: 0.2v
+    # font size difference between heading levels
+    psincr: 1.8p
+    # heading level above which point size does not change
+    growps: 4
+    toc-title: "Efnisyfirlit"
+    header-includes:
+      - ".hl is"
+      - ".hpf /usr/local/share/groff/site-tmac/hyphen.is"
+filters:
+    - image-ms.lua
+    - tasklist-ms.lua
+dpi: 300
