@@ -1,5 +1,4 @@
-# pandoc --standalone -C --pdf-engine=pdfroff --variable=fontfamily:NewCM --toc --pdf-engine-opt=--no-toc-relocation --pdf-engine-opt="-dpaper=a4" --pdf-engine-opt="-U" --pdf-engine-opt="-P-pa4" -L image-ms.lua -L tasklist-ms.lua -o test-all.pdfroff.pdf test-all.md 
-# Note: toc not set default here; use command line
+# Note: instead of --toc, see ms-toc.yaml
 from: markdown
 to: ms
 template: bk
@@ -30,11 +29,12 @@ variables:
     psincr: 1.8p
     # heading level above which point size does not change
     growps: 4
+    # Icelandic
     toc-title: "Efnisyfirlit"
     header-includes:
       - ".hl is"
       - ".hpf /usr/local/share/groff/site-tmac/hyphen.is"
 filters:
     - image-ms.lua
-    - tasklist-ms.lua
+    - fixes-ms.lua
 dpi: 300
