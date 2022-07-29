@@ -1,0 +1,8 @@
+# Garamond Libre + FiraGo for ms. Use with ms.yaml
+
+variables:
+  fontfamily: GarLib
+  pointsize: 11p
+  lineheight: 14p
+  heading-fontfam: FiraGo
+  heading-fontfam-max-level: 4

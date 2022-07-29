@@ -1,8 +1,0 @@
-# EB Garamond + FiraGO for ms. Use with ms.yaml
-
-variables:
-  fontfamily: EBGar
-  pointsize: 11p
-  lineheight: 14p
-  heading-fontfam: SrcSans
-  heading-fontfam-max-level: 4
