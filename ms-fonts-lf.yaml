@@ -1,0 +1,6 @@
+# Libertinus + FiraGo for ms. Use with ms.yaml
+
+variables:
+  fontfamily: Lib
+  heading-fontfam: FiraGo
+  heading-fontfam-max-level: 4

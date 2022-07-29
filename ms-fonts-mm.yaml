@@ -1,0 +1,6 @@
+# Minion + Myriad fonts for ms. Use with ms.yaml
+
+variables:
+  fontfamily: Minion
+  heading-fontfam: Myriad
+  heading-fontfam-max-level: 4

@@ -1,0 +1,4 @@
+# Lora for ms. Use with ms.yaml
+
+variables:
+  fontfamily: Lora

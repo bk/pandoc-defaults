@@ -1,0 +1,10 @@
+# Together with `-d ms`
+
+toc: true
+pdf-engine-opts:
+    - "-U"
+    - "--no-toc-relocation"
+variables:
+    cover-page: true
+    suppress-first-page-header: true
+    cover-page-no-date: false

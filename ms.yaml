@@ -1,4 +1,26 @@
-# Note: instead of --toc, see ms-toc.yaml
+# Base default settings for ms format, primarily intended for
+# PDF production
+#
+# NOTE: instead of `--toc`, add `-d ms-toc` and perhaps also `-d ms-coverpage`
+#
+# NOTE on fonts:
+#   - For font combos, add `-d ms-font-XY` where XY is a short mnemomic.
+#   - Font families that come with groff:
+#     - Serifs: BM (ITC Bookman Light), N (New Century Schoolbook), P (Palatino),
+#       T (Times), U-BM (URW Bookman L Light), U-N (Century Schoolbook L),
+#       U-P (URW Palladio L), U-T (Nimbus Roman No9)
+#     - Sans-serifs: A (ITC Avant Garde Gothic Book), H (Helvetica), HN
+#       (Helvetica Narrow), U-A (URW Gothic L), U-HN (Nimbus Sans L Condensed)
+#     - Monospaced: C (Courier), which in my setup has been overridden by
+#       New Computer Modern Mono; and U-C (Nimbus Mono L).
+#   - Font families that I have installed for groff:
+#     - Serifs: Aleg (Alegreya), FSer (FreeSerif), GarLib (Garamond Libre), Lib
+#       (Libertinus), Minion (Minion Pro), NewCM (New Computer Modern),
+#       ScrSer (Source Serif 4), Crim (Crimson Pro), Lora, EBGar (EB Garamond).
+#     - Sans-serifs (e.g. for heading-fontfam): NewCMSans (New Computer Modern
+#       Sans), Myriad (Myriad Pro), FiraGo, SrcSans (Source Sans 3)
+#     - Monospaced: New Computer Modern Mono as "C".
+
 from: markdown
 to: ms
 template: bk
@@ -6,16 +28,17 @@ citeproc: true
 standalone: true
 pdf-engine: pdfroff
 pdf-engine-opts:
-    # - "--no-toc-relocation"
     - "-U"
 variables:
+    # Tasklist symbols are handled in the bk.ms template - no need for filter.
+    no-tasklist-filter: true
     papersize: a4
-    fontfamily: NewCM
-    # heading-fontfam* used by filter; has no effect without
-    # fontfamily also being set.
-    # Note that this affects the font in the table of contents!
-    heading-fontfam: NewCMSans
-    heading-fontfam-max-level: 4
+    # fontfamily: Minion
+    ## Optional heading-fontfam* used by fixes-ms filter; has no effect without
+    ## fontfamily also being set.
+    ## Note that it will also be used in the table of contents!
+    # heading-fontfam: Myriad
+    # heading-fontfam-max-level: 6
     pointsize: 10p
     lineheight: 13p
     indent: 2m
@@ -25,12 +48,15 @@ variables:
     margin-top: 2.5c
     margin-bottom: 2.5c
     paragraph-spacing: 0.2v
-    # font size difference between heading levels
-    psincr: 1.8p
-    # heading level above which point size does not change
+    # Font size difference between heading levels
+    psincr: 0.25m
+    # Heading level above which point size does not change
     growps: 4
-    # Icelandic
+    # NOTE: Assumes Icelandic - will need a different defaults file for
+    # other languages
     toc-title: "Efnisyfirlit"
+    abstract-title: "ÚTDRÁTTUR"
+    icelandic-dates: true  # Affects MONTHx variables in template
     header-includes:
       - ".hl is"
       - ".hpf /usr/local/share/groff/site-tmac/hyphen.is"

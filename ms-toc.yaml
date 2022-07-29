@@ -1,40 +1,6 @@
-from: markdown
-to: ms
-template: bk
-citeproc: true
-standalone: true
+# Together with `-d ms`
+
 toc: true
-pdf-engine: pdfroff
 pdf-engine-opts:
-    - "--no-toc-relocation"
     - "-U"
-variables:
-    papersize: a4
-    fontfamily: NewCM
-    # heading-fontfam* used by filter; has no effect without
-    # fontfamily also being set.
-    # Note that this affects the font in the table of contents!
-    heading-fontfam: NewCMSans
-    heading-fontfam-max-level: 4
-    pointsize: 10p
-    lineheight: 13p
-    indent: 2m
-    hyphenate: true
-    text-width: 15c
-    margin-left: 3c
-    margin-top: 2.5c
-    margin-bottom: 2.5c
-    paragraph-spacing: 0.2v
-    # font size difference between heading levels
-    psincr: 1.8p
-    # heading level above which point size does not change
-    growps: 4
-    # Icelandic
-    toc-title: "Efnisyfirlit"
-    header-includes:
-      - ".hl is"
-      - ".hpf /usr/local/share/groff/site-tmac/hyphen.is"
-filters:
-    - image-ms.lua
-    - fixes-ms.lua
-dpi: 300
+    - "--no-toc-relocation"

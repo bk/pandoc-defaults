@@ -1,0 +1,6 @@
+# New Computer Modern Serif + Sans fonts for ms. Use with ms.yaml
+
+variables:
+  fontfamily: SrcSer
+  heading-fontfam: SrcSans
+  heading-fontfam-max-level: 4

@@ -1,0 +1,4 @@
+# Crimson Text for ms. Use with ms.yaml
+
+variables:
+  fontfamily: Crim

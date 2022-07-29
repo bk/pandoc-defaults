@@ -1,0 +1,6 @@
+# New Computer Modern Serif + Sans fonts for ms. Use with ms.yaml
+
+variables:
+  fontfamily: NewCM  # this is actually the template default
+  heading-fontfam: NewCMSans
+  heading-fontfam-max-level: 4
