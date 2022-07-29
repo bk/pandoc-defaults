@@ -39,8 +39,6 @@ variables:
     ## Note that it will also be used in the table of contents!
     # heading-fontfam: Myriad
     # heading-fontfam-max-level: 6
-    pointsize: 10p
-    lineheight: 13p
     indent: 2m
     hyphenate: true
     text-width: 15c

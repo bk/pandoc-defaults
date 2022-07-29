@@ -2,3 +2,5 @@
 
 variables:
   fontfamily: FSer
+  pointsize: 11p
+  lineheight: 14p

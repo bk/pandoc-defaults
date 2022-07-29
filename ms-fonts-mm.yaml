@@ -2,5 +2,7 @@
 
 variables:
   fontfamily: Minion
+  pointsize: 11p
+  lineheight: 14p
   heading-fontfam: Myriad
   heading-fontfam-max-level: 4

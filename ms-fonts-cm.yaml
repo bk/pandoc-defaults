@@ -2,5 +2,7 @@
 
 variables:
   fontfamily: NewCM  # this is actually the template default
+  pointsize: 11p
+  lineheight: 14p
   heading-fontfam: NewCMSans
   heading-fontfam-max-level: 4

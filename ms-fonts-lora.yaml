@@ -2,3 +2,5 @@
 
 variables:
   fontfamily: Lora
+  pointsize: 11p
+  lineheight: 14p

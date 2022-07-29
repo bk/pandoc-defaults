@@ -2,5 +2,7 @@
 
 variables:
   fontfamily: Lib
+  pointsize: 11p
+  lineheight: 14p
   heading-fontfam: FiraGo
   heading-fontfam-max-level: 4

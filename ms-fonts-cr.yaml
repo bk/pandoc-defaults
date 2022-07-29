@@ -2,3 +2,5 @@
 
 variables:
   fontfamily: Crim
+  pointsize: 11p
+  lineheight: 14p
