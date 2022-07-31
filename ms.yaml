@@ -50,6 +50,15 @@ variables:
     psincr: 0.25m
     # Heading level above which point size does not change
     growps: 4
+    ms-div-classes:
+      Warning: [".QS\n.LP\n\\f[B]VIÐVÖRUN:\\f[]\n.PP", ".QE"]
+    ms-div-attr:
+      # Ensure that text in Greek and Russian is rendered in a font
+      # which supports these glyphs. Depends on MAINFONT being defined
+      # in the template (to the initial value of the ms string variable FAM)
+      lang:
+        'el_GR': [".ds FAM EBGar", ".ds FAM \\*[MAINFONT]"]
+        'ru_RU': [".ds FAM EBGar", ".ds FAM \\*[MAINFONT]"]
     # NOTE: Assumes Icelandic - will need a different defaults file for
     # other languages
     toc-title: "Efnisyfirlit"
