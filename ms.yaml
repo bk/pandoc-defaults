@@ -1,7 +1,5 @@
 # Base default settings for ms format, primarily intended for
-# PDF production
-#
-# NOTE: instead of `--toc`, add `-d ms-toc` and perhaps also `-d ms-coverpage`
+# PDF production.
 #
 # NOTE on fonts:
 #   - For font combos, add `-d ms-font-XY` where XY is a short mnemomic.
@@ -18,8 +16,14 @@
 #       (Libertinus), Minion (Minion Pro), NewCM (New Computer Modern),
 #       ScrSer (Source Serif 4), Crim (Crimson Pro), Lora, EBGar (EB Garamond).
 #     - Sans-serifs (e.g. for heading-fontfam): NewCMSans (New Computer Modern
-#       Sans), Myriad (Myriad Pro), FiraGo, SrcSans (Source Sans 3)
-#     - Monospaced: New Computer Modern Mono as "C".
+#       Sans), Myriad (Myriad Pro), FiraGo, SrcSans (Source Sans 3), AlegSans
+#       (Alegreya Sans)
+#     - Monospaced: New Computer Modern Mono (as "C").
+#
+# NOTE on other companion default files:
+#   - Instead of `--toc`, add `-d ms-toc` and perhaps also `-d ms-coverpage`
+#   - For fenced div handling (both by class and attribute), use `-d ms-div`.
+#
 
 from: markdown
 to: ms
@@ -50,15 +54,6 @@ variables:
     psincr: 0.25m
     # Heading level above which point size does not change
     growps: 4
-    ms-div-classes:
-      Warning: [".QS\n.LP\n\\f[B]VIÐVÖRUN:\\f[]\n.PP", ".QE"]
-    ms-div-attr:
-      # Ensure that text in Greek and Russian is rendered in a font
-      # which supports these glyphs. Depends on MAINFONT being defined
-      # in the template (to the initial value of the ms string variable FAM)
-      lang:
-        'el_GR': [".ds FAM EBGar", ".ds FAM \\*[MAINFONT]"]
-        'ru_RU': [".ds FAM EBGar", ".ds FAM \\*[MAINFONT]"]
     # NOTE: Assumes Icelandic - will need a different defaults file for
     # other languages
     toc-title: "Efnisyfirlit"

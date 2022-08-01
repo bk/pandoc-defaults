@@ -1,0 +1,42 @@
+# Div filtering (by class and attribute).
+# To be used together with `-d ms`.
+
+variables:
+    # Two element lists keyed by classname (case sensitive).
+    # Each list contains a 'before' and 'after' string.
+    ms-div-classes:
+      noindent: ['.nr PI 0m', '.nr PI \n[PIORIG]']
+      Warning:
+        - |-
+          .nr PO 4.5c
+          .nr LL 12c
+          .sp 0.5m
+          .na
+          .TS
+          delim(@@) doublebox center;
+          cb.
+          T{
+          VIÐVÖRUN
+          T}
+          _
+          .T&
+          l.
+          T{
+        - |-
+          T}
+          .TE
+          .ad
+          .nr PO \n[POORIG]
+          .nr LL \n[LLORIG]
+          .sp 0.5m
+    # Each key is the name of an attribute. It points to a hash
+    # where the keys are values of that attribute. For each of these
+    # values, we have a two-element list, with the text to appear
+    # before and after the matching block.
+    ms-div-attr:
+      # Ensure that text in Greek and Russian is rendered in a font
+      # which supports these glyphs. Depends on MAINFONT being defined
+      # in the template (to the initial value of the ms string variable FAM)
+      lang:
+        'el_GR': ['.ds FAM EBGar', '.ds FAM \*[MAINFONT]']
+        'ru_RU': ['.ds FAM EBGar', '.ds FAM \*[MAINFONT]']
