@@ -1,4 +1,4 @@
-# New Computer Modern Serif + Sans fonts for ms. Use with ms.yaml
+# Source Serif + Sans fonts for ms. Use with ms.yaml
 
 variables:
   fontfamily: SrcSer

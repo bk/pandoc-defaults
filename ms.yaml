@@ -1,17 +1,18 @@
 # Base default settings for ms format, primarily intended for
-# PDF production.
+# PDF production. Depends on the `bk.ms` template and the filters
+# `fixes-ms` and `image-ms`.
 #
 # NOTE on fonts:
-#   - For font combos, add `-d ms-font-XY` where XY is a short mnemomic.
+#   - For font combos, add `-d ms/fonts/XY` where XY is a short mnemomic.
 #   - Font families that come with groff:
 #     - Serifs: BM (ITC Bookman Light), N (New Century Schoolbook), P (Palatino),
 #       T (Times), U-BM (URW Bookman L Light), U-N (Century Schoolbook L),
-#       U-P (URW Palladio L), U-T (Nimbus Roman No9)
+#       U-P (URW Palladio L), U-T (Nimbus Roman No9).
 #     - Sans-serifs: A (ITC Avant Garde Gothic Book), H (Helvetica), HN
 #       (Helvetica Narrow), U-A (URW Gothic L), U-HN (Nimbus Sans L Condensed)
 #     - Monospaced: C (Courier), which in my setup has been overridden by
 #       New Computer Modern Mono; and U-C (Nimbus Mono L).
-#   - Font families that I have installed for groff:
+#   - Font families that I have made available to groff:
 #     - Serifs: Aleg (Alegreya), FSer (FreeSerif), GarLib (Garamond Libre), Lib
 #       (Libertinus), Minion (Minion Pro), NewCM (New Computer Modern),
 #       ScrSer (Source Serif 4), Crim (Crimson Pro), Lora, EBGar (EB Garamond).
@@ -21,8 +22,8 @@
 #     - Monospaced: New Computer Modern Mono (as "C").
 #
 # NOTE on other companion default files:
-#   - Instead of `--toc`, add `-d ms-toc` and perhaps also `-d ms-coverpage`
-#   - For fenced div handling (both by class and attribute), use `-d ms-div`.
+#   - For fenced div handling (both by class and attribute), use `-d ms/div`.
+#   - Instead of `--toc`, add `-d ms/toc` or even `-d ms/coverpage`
 #
 
 from: markdown
