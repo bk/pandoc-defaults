@@ -1,6 +1,6 @@
 # pandoc-defaults
 
-This is a personal collection of defaults files for pandoc (specified via the `-d` switch).
+A personal collection of defaults files for pandoc (specified via the `-d` switch).
 
 ## Files for roff ms output
 
@@ -23,6 +23,8 @@ Aside from the main file, the following additional defaults for `ms` are current
   - `lf`: Libertinus + FiraGO.
   - `lora`: Lora.
   - `mm`: Minion + Myriad.
+  - `plain`: Times + Helvetica ("native" fonts T and H)
+  - `pal`: Palatino + Avant Garde ("native" fonts P and A)
   - `ss`: Source Serif + Source Sans.
   - `t`: Free Serif (a Times-like font, hence the abbreviation).
 

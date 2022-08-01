@@ -1,0 +1,8 @@
+# "Native" fonts: T for body text, H for headings. Use with ms.yaml
+
+variables:
+  fontfamily: T
+  pointsize: 11p
+  lineheight: 14p
+  heading-fontfam: H
+  heading-fontfam-max-level: 4
