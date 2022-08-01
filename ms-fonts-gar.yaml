@@ -3,6 +3,6 @@
 variables:
   fontfamily: EBGar
   pointsize: 11p
-  lineheight: 14p
+  lineheight: 1.3m
   heading-fontfam: SrcSans
   heading-fontfam-max-level: 4
