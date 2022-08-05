@@ -1,0 +1,15 @@
+# Sabon + Futura
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "Sabon LT Std"
+    sansfont: "Futura Std"
+    mathfont: "Garamond-Math.otf"
+    monofont: "Source Code Pro Medium"
+    monofontoptions: "Scale=0.9"
+    header-includes: |
+      \newfontfamily{\greekfont}{EB Garamond}
+      \newfontfamily{\cyrillicfont}{EB Garamond}
+      \usepackage[Greek,Cyrillic]{ucharclasses}
+      \setTransitionsForGreek{\greekfont}{}
+      \setTransitionsForCyrillics{\greekfont}{}

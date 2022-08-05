@@ -1,0 +1,9 @@
+# Minion + Myriad
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "Minion Pro"
+    sansfont: "Myriad Pro"
+    mathfont: "Garamond-Math.otf"
+    monofont: "Source Code Pro Medium"
+    monofontoptions: "Scale=0.87"

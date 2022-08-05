@@ -1,0 +1,15 @@
+# Crimson Pro + Alegreya Sans
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "Crimson Pro"
+    sansfont: "Alegreya Sans"
+    mathfont: "Garamond-Math.otf"
+    monofont: "NewComputerModernMono10"
+    monofontoptions: "Scale=0.95"
+    header-includes: |
+      \newfontfamily{\greekfont}{EB Garamond}
+      \newfontfamily{\cyrillicfont}{EB Garamond}
+      \usepackage[Greek,Cyrillic]{ucharclasses}
+      \setTransitionsForGreek{\greekfont}{}
+      \setTransitionsForCyrillics{\greekfont}{}

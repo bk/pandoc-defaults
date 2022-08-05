@@ -1,0 +1,9 @@
+# New Computer Modern Serif + Sans
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "NewComputerModern10"
+    sansfont: "NewComputerModernSans10"
+    mathfont: "latinmodern-math.otf"
+    monofont: "NewComputerModernMono10"
+    # monofontoptions: "Scale=0.95"

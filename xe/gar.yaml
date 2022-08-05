@@ -1,0 +1,13 @@
+# EB Garamond + FiraGO.
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "EB Garamond"
+    # EB Garamond 08 has a strange "ð", don't use it
+    mainfontoptions: |
+      Contextuals=NoAlternate,%
+      UprightFeatures = {SizeFeatures = {{Size=1-, OpticalSize=12},}}
+    sansfont: FiraGO
+    mathfont: "Garamond-Math.otf"
+    monofont: "Source Code Pro Medium"
+    monofontoptions: "Scale=0.82"

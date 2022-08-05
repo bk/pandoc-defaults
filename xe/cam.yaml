@@ -1,0 +1,9 @@
+# Cambria + Source Sans
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "Cambria"
+    sansfont: "Source Sans 3"
+    mathfont: "Cambria Math"
+    monofont: "Source Code Pro Medium"
+    monofontoptions: "Scale=0.9"

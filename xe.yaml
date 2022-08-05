@@ -1,0 +1,26 @@
+# Base default settings for LaTeX output, primarily intended for
+# PDF production. Depends on the `bk.latex` template and the filters
+# in `fixes-tex.lua`.
+# Font settings are under xe/,  e.g. `-d xe/gar` for EB Garamond.
+
+from: markdown
+to: latex
+template: bk
+citeproc: true
+standalone: true
+pdf-engine: xelatex
+dpi: 300
+variables:
+    lang: is
+    papersize: a4
+    documentclass: article # scrreprt # scrartcl
+    geometry: 'margin=3cm'
+    biblio-style: 'authoryear'
+    block-headings: false
+    indent: true
+    linestretch: 1.15
+    # Turn this on so as to remove title, author, date and abstract
+    # from the front of the document
+    omit-titleblock: false
+filters:
+    - fixes-tex.lua

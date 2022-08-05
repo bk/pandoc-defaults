@@ -1,0 +1,15 @@
+# Caslon + Futura
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "Adobe Caslon Pro"
+    sansfont: "Futura Std"
+    mathfont: "Garamond-Math.otf"
+    monofont: "Source Code Pro Medium"
+    monofontoptions: "Scale=0.85"
+    header-includes: |
+      \newfontfamily{\greekfont}{EB Garamond}
+      \newfontfamily{\cyrillicfont}{EB Garamond}
+      \usepackage[Greek,Cyrillic]{ucharclasses}
+      \setTransitionsForGreek{\greekfont}{}
+      \setTransitionsForCyrillics{\greekfont}{}
