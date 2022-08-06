@@ -33,3 +33,24 @@ Typical usage:
 ```sh
 pandoc -d ms -d ms/div -d ms/fonts/gar -o my.pdf my.md
 ```
+
+## Files for LaTeX output
+
+`xe.yaml` and companions is a set of default files for LaTeX/PDF output using XeLaTex. The files in the `xe/` directory are font settings, named by short mnemonic. Currently these are:
+
+- `cam`: Cambria + Source Sans
+- `caslon`: Caslon + Futura
+- `cm`: New Computer Modern Serif + Sans
+- `crim`: Crimson Pro + Alegreya Sans
+- `gar`: EB Garamond + FiraGO.
+- `mm`: Minion + Myriad
+- `pal`: Palatino + Avant Garde
+- `sabon`: Sabon + Futura
+
+Typical usage:
+
+```sh
+pandoc -d xe -d xe/gar -o my.pdf my.md
+```
+
+The default fontsize is 11pt; to change this set the `fontsize` variable.
