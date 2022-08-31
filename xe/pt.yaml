@@ -1,0 +1,13 @@
+# PT Serif + PT Sans
+# Font settings for xelatex/lualatex. Use with `-d xe`.
+
+variables:
+    mainfont: "PT Serif"
+    sansfont: "PT Sans"
+    mathfont: "Cambria Math"
+    monofont: "PT Mono"
+    monofontoptions: "Scale=0.95"
+    header-includes: |
+      \newfontfamily{\greekfont}{Cambria}
+      \usepackage[Greek]{ucharclasses}
+      \setTransitionsForGreek{\greekfont}{}
