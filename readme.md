@@ -45,6 +45,7 @@ pandoc -d ms -d ms/div -d ms/fonts/gar -o my.pdf my.md
 - `gar`: EB Garamond + FiraGO.
 - `mm`: Minion + Myriad
 - `pal`: Palatino + Avant Garde
+- `pt`: PT Serif + PT Sans
 - `sabon`: Sabon + Futura
 
 Typical usage:
