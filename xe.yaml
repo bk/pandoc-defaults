@@ -13,12 +13,12 @@ dpi: 300
 variables:
     lang: is
     papersize: a4
-    documentclass: article # scrreprt # scrartcl
+    # documentclass: article # scrreprt # scrartcl
     geometry: 'margin=3cm'
     biblio-style: 'authoryear'
     block-headings: false
     indent: true
-    linestretch: 1.15
+    # linestretch: 1.15
     # Turn this on so as to remove title, author, date and abstract
     # from the front of the document
     omit-titleblock: false
