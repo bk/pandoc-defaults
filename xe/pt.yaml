@@ -11,3 +11,4 @@ variables:
       \newfontfamily{\greekfont}{Cambria}
       \usepackage[Greek]{ucharclasses}
       \setTransitionsForGreek{\greekfont}{}
+    defaultfontsize: 10pt
