@@ -1,5 +1,6 @@
 # Settings for typst
 pdf-engine: typst
+template: bk
 filters:
   - fixes-typst.lua
 variables:
@@ -11,10 +12,15 @@ variables:
   margin:
     x: 3cm
     y: 3cm
-  mainfont: "EB Garamond"
+  mainfont: "PT Serif"
+  sansfont: "PT Sans"
+  linkcolor: blue
+  fontsize: 11pt
+  # TODO: use gentle-clues instead
   header-includes:
-    - '#show heading: set text(font:"FiraGO")'
-    - '#show raw: set text(size:0.92em)'
+    - '#show heading: set text(font:"PT Sans")'
+    - '#show raw: set text(font:"DejaVu Sans Mono")'
+    - '#show raw: set block(fill:luma(240),width:100%,inset:6pt)'
     - '#import "@preview/note-me:0.2.1": admonition'
     - '#let tip(title:"Ábending", t) = admonition(icon:"icons/light-bulb.svg", title:title, color:green, background-color:luma(240), t)'
     - '#let note(title:"Athugasemd", t) = admonition(icon:"icons/info.svg", title:title, color:blue, background-color:luma(240), t)'
