@@ -1,0 +1,36 @@
+# Uses the Eisvogel template with LuaLaTeX.
+# Font settings in xe/
+
+from: markdown
+to: latex
+template: eisvogel
+citeproc: true
+standalone: true
+pdf-engine: lualatex
+dpi: 300
+variables:
+  lang: is
+  papersize: a4
+  # documentclass: article # scrreprt # scrartcl
+  # geometry: 'margin=3cm'
+  biblio-style: 'authoryear'
+  block-headings: false
+  indent: true
+  # linestretch: 1.15
+  # Turn this on so as to remove title, author, date and abstract
+  # from the front of the document
+  # omit-titleblock: false
+  titlepage: true
+  header-includes:
+    - |
+        \usepackage{tcolorbox}
+        \newenvironment{admonition}[2]{%
+          \begin{tcolorbox}[left skip=.1\linewidth, right skip=.1\linewidth, before skip=15pt, after skip=15pt, colback=#1!5!white,colframe=#1!75!black,title={\sffamily\bfseries\large #2}]
+          }{%
+          \end{tcolorbox}}
+        \newenvironment{Warning}[1][Viðvörun]{%
+          \begin{admonition}{red}{#1}
+          }{%
+          \end{admonition}}
+filters:
+  - fixes-tex.lua
